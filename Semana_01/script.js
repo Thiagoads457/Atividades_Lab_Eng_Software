@@ -1,14 +1,12 @@
 function verificarParImpar() {
-    // Solicita ao usuário um número inteiro positivo
+    
     let numero = parseInt(prompt("Digite um número inteiro positivo:"));
 
-    // Verifica se o valor fornecido é um número e se é positivo
     if (isNaN(numero) || numero < 0) {
         alert("Por favor, digite um número inteiro positivo válido.");
         return;
     }
 
-    // Verifica se o número é par ou ímpar
     if (numero % 2 === 0) {
         alert("O número " + numero + " é par.");
     } else {
@@ -17,16 +15,13 @@ function verificarParImpar() {
 }
 
 function verificarPrimo() {
-    // Solicita ao usuário um número inteiro positivo
     let numero = parseInt(prompt("Digite um número inteiro positivo:"));
 
-    // Verifica se o valor fornecido é um número e se é positivo
     if (isNaN(numero) || numero <= 0) {
         alert("Por favor, digite um número inteiro positivo válido.");
         return;
     }
 
-    // Função para verificar se um número é primo
     function isPrimo(num) {
         if (num <= 1) return false;
         if (num === 2) return true;
@@ -37,10 +32,37 @@ function verificarPrimo() {
         return true;
     }
 
-    // Verifica se o número é primo e exibe o resultado
     if (isPrimo(numero)) {
         alert("O número " + numero + " é primo.");
     } else {
         alert("O número " + numero + " não é primo.");
     }
 }
+
+function calcularFatorial() {
+    let numero = parseInt(prompt("Digite um número inteiro positivo:"));
+  
+    if (isNaN(numero) || numero < 0) {
+      alert("Por favor, digite um número inteiro positivo válido.");
+      return;
+    }
+  
+    let fatorial = 1;
+    for (let i = 2; i <= numero; i++) {
+      fatorial *= i;
+    }
+  
+    alert("O fatorial de " + numero + " é: " + fatorial);
+  }
+
+  function verificarTipoDado() {
+    let dado = prompt("Digite qualquer valor:");
+  
+    let confirmar = confirm("Deseja verificar o tipo do dado?");
+  
+    if (confirmar) {
+      document.body.textContent = "O tipo do dado é: " + typeof dado;
+    } else {
+      document.body.textContent = "Obrigado por visitar esta página.";
+    }
+  }
