@@ -61,8 +61,14 @@ function calcularFatorial() {
     let confirmar = confirm("Deseja verificar o tipo do dado?");
   
     if (confirmar) {
+      
+      if (!isNaN(dado) && dado.trim() !== "") {
+        dado = Number(dado); 
+  
       document.body.textContent = "O tipo do dado é: " + typeof dado;
     } else {
       document.body.textContent = "Obrigado por visitar esta página.";
     }
   }
+}
+  
