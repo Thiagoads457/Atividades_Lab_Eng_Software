@@ -31,3 +31,24 @@ function iniciarRelogio() {
     setInterval(atualizarRelogio, 1000);  
     
 }
+
+
+function verificarPalindromo() {
+    const texto = prompt("Digite uma palavra ou frase para verificar se é um palíndromo:");
+
+    if (texto) {
+        // Remover espaços, acentos e transformar em minúsculas para uma comparação precisa
+        const textoLimpo = texto.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, '');
+
+        // Verificar se o texto limpo é igual ao seu reverso
+        const ehPalindromo = textoLimpo === textoLimpo.split('').reverse().join('');
+
+        if (ehPalindromo) {
+            alert("O texto digitado é um palíndromo!");
+        } else {
+            alert("O texto digitado não é um palíndromo.");
+        }
+    } else {
+        alert("Você não digitou nenhum texto.");
+    }
+}
