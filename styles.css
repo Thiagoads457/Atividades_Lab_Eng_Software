@@ -64,6 +64,24 @@ a.btn:hover {
     background-color: #218838;
 }
 
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 400px; /* Limita a largura máxima */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+}
+
 
 @media (max-width: 500px) {
     .container {
